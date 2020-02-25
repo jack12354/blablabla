@@ -13,7 +13,8 @@ public class boom : MonoBehaviour
     private void Start()
     {
         words = GetComponentInChildren<TextMesh>();
-   }
+        newtext();
+    }
 
     // Update is called once per frame
     private void Update()
@@ -32,22 +33,22 @@ public class boom : MonoBehaviour
             b.r = ddr;
             Debug.Log("bang");
         }
-        if (Input.GetKey(KeyCode.Equals))
+        if (Input.GetKeyUp(KeyCode.Equals))
         {
-            ddt += 1f;
+            ddt += 10f;
             newtext();
         }
-        if (Input.GetKey(KeyCode.Minus))
+        if (Input.GetKeyUp(KeyCode.Minus))
         {
-            ddt -= 1f;
+            ddt -= 10f;
             newtext();
         }
-        if (Input.GetKey(KeyCode.RightBracket))
+        if (Input.GetKeyUp(KeyCode.RightBracket))
         {
             ddr += 1f;
             newtext();
         }
-        if (Input.GetKey(KeyCode.LeftBracket))
+        if (Input.GetKeyUp(KeyCode.LeftBracket))
         {
             ddr -= 1f;
             newtext();
